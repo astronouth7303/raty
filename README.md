@@ -2,6 +2,8 @@
 
 jQuery Raty is a plugin that generates a customizable star rating.
 
+This fork is based on Font Awesome's icons instead
+
 ## Version
 
 ```
@@ -15,16 +17,15 @@ jQuery Raty is a plugin that generates a customizable star rating.
 ## Required Files
 
 + jquery.raty.min.js
-+ star-on.png
-+ star-off.png
++ Font Awesome
 
 ## Options
 
 ```js
 cancel      : false                                          // Creates a cancel button to cancel the rating.
 cancelHint  : 'Cancel this rating!'                          // The cancel's button hint.
-cancelOff   : 'cancel-off.png'                               // Icon used on active cancel.
-cancelOn    : 'cancel-on.png'                                // Icon used inactive cancel.
+cancelOff   : 'icon-remove-circle'                           // Icon used on active cancel.
+cancelOn    : 'icon-remove-sign'                             // Icon used inactive cancel.
 cancelPlace : 'left'                                         // Cancel's button position.
 click       : undefined                                      // Callback executed on rating click.
 half        : false                                          // Enables half star selection.
@@ -36,7 +37,6 @@ mouseover   : undefined                                      // Callback execute
 noRatedMsg  : 'Not rated yet!'                               // Hint for no rated elements when it's readOnly.
 number      : 5                                              // Number of stars that will be presented.
 numberMax   : 20                                             // Max of star the option number can creates.
-path        : ''                                             // A global locate where the icon will be looked.
 precision   : false                                          // Enables the selection of a precision score.
 readOnly    : false                                          // Turns the rating read-only.
 round       : { down: .25, full: .6, up: .76 }               // Included values attributes to do the score round math.
@@ -45,9 +45,9 @@ scoreName   : 'score'                                        // Name of the hidd
 single      : false                                          // Enables just a single star selection.
 size        : 16                                             // The size of the icons that will be used.
 space       : true                                           // Puts space between the icons.
-starHalf    : 'star-half.png'                                // The name of the half star image.
-starOff     : 'star-off.png'                                 // Name of the star image off.
-starOn      : 'star-on.png'                                  // Name of the star image on.
+starHalf    : 'icon-star-half-empty'                         // The name of the half star image.
+starOff     : 'icon-star-empty'                              // Name of the star image off.
+starOn      : 'icon-star'                                    // Name of the star image on.
 target      : undefined                                      // Element selector where the score will be displayed.
 targetFormat: '{score}'                                      // Template to interpolate the score in.
 targetKeep  : false                                          // If the last rating value will be keeped after mouseout.
@@ -114,6 +114,7 @@ $('#star').raty('reload');                  // Destroy the bind and give you the
 + packowitz
 + Rodrigo Sliachticas
 + Toni Uebernickel
++ James Bliss
 
 ## Licence
 
